@@ -30,7 +30,7 @@
             <div class="ui list">
                 <div class="item">Created At: {{todo.created_at.strftime('%Y-%m-%d')}}</div>
                 {% if todo.time_updated %}
-                <div class="item">Last Update: {{(datetime - todo.time_updated).seconds//60}} minutes ago</div>
+                <div class="item">Last Update: {{datetime - todo.time_updated.strftime('%Y-%m-%d')}} minutes ago</div>
                 {% else %}
                 <div class="item">Last Update: No updated</div>
                 {% endif %}
